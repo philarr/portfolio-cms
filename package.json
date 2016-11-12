@@ -1,0 +1,28 @@
+{
+  "name": "portfolio-cms",
+  "version": "1.0.0",
+  "description": "Content management system built with React. Expose API routes through JSON schema.",
+  "main": "build/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/philarr/portfolio-cms.git"
+  },
+  "keywords": [
+    "react",
+    "cms",
+    "json",
+    "schema",
+    "route",
+    "api",
+    "rest"
+  ],
+  "author": "Philip Chung",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/philarr/portfolio-cms/issues"
+  },
+  "homepage": "https://github.com/philarr/portfolio-cms#readme"
+}
