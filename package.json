@@ -4,7 +4,7 @@
   "description": "Content management system built with React. Expose API routes through JSON schema.",
   "main": "build/index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha --require babel-polyfill --compilers js:babel-register"
   },
   "repository": {
     "type": "git",
@@ -26,6 +26,10 @@
   },
   "homepage": "https://github.com/philarr/portfolio-cms#readme",
   "devDependencies": {
+    "babel-plugin-transform-object-rest-spread": "^6.16.0",
+    "babel-polyfill": "^6.16.0",
+    "babel-preset-latest": "^6.16.0",
+    "babel-register": "^6.18.0",
     "chai": "^3.5.0",
     "enzyme": "^2.6.0",
     "eslint": "^3.10.0",

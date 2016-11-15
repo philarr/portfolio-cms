@@ -1,9 +1,15 @@
 module.exports = {
     "extends": "airbnb",
-    "installedESLint": true,
+    "env": {
+        "node": true,
+        "browser": true
+    },
     "plugins": [
         "react",
         "jsx-a11y",
         "import"
-    ]
+    ],
+    "rules": {
+        "indent": [2, 4]
+    }
 };
