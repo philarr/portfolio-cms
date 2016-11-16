@@ -10,6 +10,7 @@ module.exports = {
         "import"
     ],
     "rules": {
-        "indent": [2, 4]
+        "indent": [2, 4],
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
     }
 };

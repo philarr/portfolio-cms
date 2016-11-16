@@ -1,4 +1,5 @@
 import { expect } from 'chai';
+import jwt from 'jsonwebtoken';
 
 describe('ES6 environment check', () => {
     it('should give the correct array spread', () => {
@@ -20,3 +21,27 @@ describe('ES6 environment check', () => {
     });
 });
 
+function createJWT(username, state) {
+    return jwt.sign({
+        username,
+        isLogged: state,
+    }, 'secret');
+}
+
+function decodeJWT(string) {
+    return jwt.decode(string, { complete: true });
+}
+
+describe('JWT check', () => {
+    const UserToken = createJWT('user', true);
+
+    it('should be a string', () => {
+        expect(UserToken).to.be.a('string');
+    });
+
+    it('should contain username and state', () => {
+        const { payload: { username, isLogged } } = decodeJWT(UserToken);
+        expect(username).to.not.be.undefined;
+        expect(isLogged).to.not.be.undefined;
+    });
+});
