@@ -45,3 +45,21 @@ describe('JWT check', () => {
         expect(isLogged).to.not.be.undefined;
     });
 });
+
+describe('Authentication', () => {
+    it('should send jwt token if exists');
+    it('should redirect to /login if response 401');
+    it('should redirect to /dashboard if response 202');
+});
+
+
+describe('Login Page', () => {
+    it('should render login form');
+    it('should fill in username when jwt exists');
+});
+
+describe('Dashboard container', () => {
+    it('should render title bar');
+    it('should render left navigation');
+    it('should render main content');
+});
